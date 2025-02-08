@@ -1,0 +1,7 @@
+#chrome/firefox/edge
+browser: chrome
+
+#true/false
+headless: false
+
+search_url: https://motorway.co.uk/
