@@ -1,4 +1,3 @@
-# coding=utf-8
 from pathlib import Path
 
 import pytest
@@ -10,18 +9,13 @@ from utils.vehicle_output_parser import read_vehicle_data
 from utils.vehicle_input_parser import extract_vehicle_numbers
 from utils.util import find_vehicle_by_reg
 
-
 class TestSearch(BaseTest):
-    """
-    A test class for verifying vehicle search functionality using Selenium and data-driven testing.
-    """
+    """A test class for verifying vehicle search functionality using Selenium and data-driven testing."""
 
     @pytest.fixture(autouse=True)
     def load_pages(self):
-        """
-        Initialize the Search Page object and load test data.
-        This method loads expected vehicle data and input vehicle registration numbers.
-        """
+        """Initialize the Search Page object and load test data.
+        This method loads expected vehicle data and input vehicle registration numbers."""
         self.page = SearchPage(self.driver, self.wait)
 
         # Define file paths for expected vehicle data and input vehicle numbers
@@ -33,10 +27,8 @@ class TestSearch(BaseTest):
         self.vehicle_numbers = extract_vehicle_numbers(input_filepath)
 
     def test_search(self):
-        """
-        Test vehicle search functionality using multiple registration numbers.
-        It verifies if the vehicle details match the expected data.
-        """
+        """Test vehicle search functionality using multiple registration numbers.
+        It verifies if the vehicle details match the expected data."""
         global message
         failed_cases = []  # List to store failed searches for better reporting
         passed_count = 0   # Counter to track passed test cases

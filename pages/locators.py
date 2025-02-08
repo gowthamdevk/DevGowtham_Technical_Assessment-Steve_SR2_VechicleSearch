@@ -1,10 +1,8 @@
 from selenium.webdriver.common.by import By
 
 class SearchPageLocators:
-    """
-    A class containing locators for elements on the vehicle search page.
-    These locators are used to find elements when interacting with the page using Selenium.
-    """
+    """A class containing locators for elements on the vehicle search page.
+    These locators are used to find elements when interacting with the page using Selenium."""
 
     # Locator for the search input field where the vehicle registration number is entered
     SEARCH_INPUT = (By.ID, "vrm-input")

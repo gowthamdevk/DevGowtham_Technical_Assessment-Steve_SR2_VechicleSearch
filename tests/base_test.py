@@ -16,20 +16,14 @@ from utils.util import config
 # Suppress webdriver manager logs
 os.environ['WDM_LOG_LEVEL'] = '0'
 
-
 class BaseTest:
-    """
-    A base test class that initializes the WebDriver for browser automation.
-    """
+    """A base test class that initializes the WebDriver for browser automation."""
 
     @pytest.fixture(autouse=True)
     def init_driver(self):
-        """
-        Pytest fixture to initialize the WebDriver before each test and close it after execution.
+        """Pytest fixture to initialize the WebDriver before each test and close it after execution.
         It selects the browser based on the configuration file.
-
-        :yield: A tuple containing WebDriverWait and WebDriver instances
-        """
+        :yield: A tuple containing WebDriverWait and WebDriver instances"""
         warnings.simplefilter("ignore", ResourceWarning)  # Suppress resource warnings
 
         # Determine the browser type from the configuration file

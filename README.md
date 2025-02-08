@@ -1,7 +1,5 @@
 # Vehicle-search
-
 # Requirements
-
 * Python 3.12.3
 * pip (24.0) and setuptools
 * Recommended IDE used is pycharm

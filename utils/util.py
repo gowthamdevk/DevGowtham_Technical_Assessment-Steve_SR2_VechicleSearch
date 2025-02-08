@@ -2,13 +2,9 @@ from pathlib import Path
 
 import yaml
 
-
 def config():
-    """
-    Load configuration settings from the config.yaml file.
-
-    :return: Dictionary containing configuration settings
-    """
+    """Load configuration settings from the config.yaml file.
+    :return: Dictionary containing configuration settings"""
     path = Path(__file__).parent / "../config.yaml"  # Define the path to the config file
     try:
         with open(path) as config_file:
@@ -18,13 +14,10 @@ def config():
         config_file.close()  # Ensure the file is closed properly
 
 def find_vehicle_by_reg(reg_number, expected_vehicle_list):
-    """
-    Search for a vehicle in the expected data by registration number.
-
+    """Search for a vehicle in the expected data by registration number.
     :param reg_number: The vehicle registration number to search for.
     :param expected_vehicle_list: A list of expected vehicle objects containing registration details.
-    :return: The vehicle object if found, otherwise None.
-    """
+    :return: The vehicle object if found, otherwise None."""
     # Normalize the registration number by removing spaces and converting it to uppercase
     reg_number = reg_number.replace(" ", "").strip().upper()
 

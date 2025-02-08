@@ -1,6 +1,7 @@
 import csv
 
 # Define a class to represent a vehicle
+"""Declaration of the Vehicle properties"""
 class Vehicle:
     def __init__(self, variant_reg, make_model, year):
         self.variant_reg = variant_reg
@@ -10,6 +11,7 @@ class Vehicle:
     def __repr__(self):
         return f"Vehicle(variant_reg='{self.variant_reg}', make_model='{self.make_model}', year={self.year})"
 
+"""Read vehicle data from the output file"""
 def read_vehicle_data(filepath):
     vehicles = []
     with open(filepath, 'r', newline='') as csvfile:
