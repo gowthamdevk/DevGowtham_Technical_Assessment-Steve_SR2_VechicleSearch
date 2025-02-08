@@ -4,9 +4,11 @@
 
 * Python 3.12.3
 * pip (24.0) and setuptools
+* Recommended IDE used is pycharm
 * [venv](<https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/>) (recommended)
 
-# Instalation
+# Installation
+**_Run below steps only if the .venv is not created in your Project Folder_**
 
 Assuming python, pip and venv are installed correctly:
 
